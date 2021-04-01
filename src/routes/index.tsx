@@ -3,12 +3,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Search from '../pages/search';
 
-const Auth = createStackNavigator();
+const App = createStackNavigator();
 
 const Routes: React.FC = () => (
-  <Auth.Navigator headerMode="none" initialRouteName="Characters">
-    <Auth.Screen name="Characters" component={Search} />
-    {/* <Auth.Screen name="Detail" component={Detail} /> */}
-  </Auth.Navigator>
+  <App.Navigator headerMode="none" initialRouteName="Characters">
+    <App.Screen name="Characters" component={Search} />
+  </App.Navigator>
 );
 export default Routes;
