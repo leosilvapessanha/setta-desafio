@@ -12,7 +12,7 @@ import api from '../../services/api';
 
 import ListCharactersProps from '../../@types/interfaces/ListCharactersProps';
 import CharacterProps from '../../@types/interfaces/CharacterProps';
-// import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 const Characters = () => {
   const [nextPage, setNextPage] = useState<number>(1);
@@ -31,16 +31,13 @@ const Characters = () => {
       setLoading(true);
       const response = await api.get<ListCharactersProps>(`?page= ${nextPage}`);
       setLoading(false);
-      if (response.status === 200) {
-        if (response.data.next) {
-          setNextPage(nextPage + 1);
-          setCharacters([...characters, ...response.data.results]);
-        } else {
-          return;
-        }
+      if (response.status === 200 && response.data.next) {
+        setNextPage(nextPage + 1);
+        setCharacters([...characters, ...response.data.results]);
       }
     } catch (error) {
       setLoading(false);
+      console.log(error);
     }
   };
 
@@ -62,6 +59,11 @@ const Characters = () => {
 
   return (
     <>
+      <Image
+        source={logo}
+        resizeMode="cover"
+        style={{ width: '100%', height: 200 }}
+      />
       <Container>
         <FlatList
           testID="characters"
