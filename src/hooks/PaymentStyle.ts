@@ -19,7 +19,7 @@ export const Title = styled.Text`
   flex-direction: row;
   /* height: 50%; */
   width: 100%;
-  justify-content:center;
+  text-align:center;
   align-items: center;
   background-color: #fff;
   font-weight: bold;
@@ -28,9 +28,16 @@ export const Title = styled.Text`
   margin-bottom: 16px;
  `;
 
-export const CustomButton = styled.Button`
-  background:purple;
-  margin-top:16px
-
-`
-
+export const ButtonContainer = styled.TouchableOpacity`
+  width: 180px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 24px;
+  background-color: #f4f4f4;
+  color:#000
+  `
+export const ButtonText = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+`;

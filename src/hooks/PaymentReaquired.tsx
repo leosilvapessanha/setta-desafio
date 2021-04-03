@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, CustomButton, Title } from './PaymentStyle';
+import { ButtonText, Container, ButtonContainer, Title } from './PaymentStyle';
 
 interface TimeOutProps {
   timeAllowed: boolean;
@@ -11,7 +11,9 @@ const TimeOut = (props: TimeOutProps): React.ReactElement => {
     <>
       <Container>
         <Title>O que achou deste app?!</Title>
-        <CustomButton title="Cadastre-se aqui" type="button" />
+        <ButtonContainer>
+          <ButtonText>Compre aqui!!!</ButtonText>
+        </ButtonContainer>
       </Container>
     </>
   );
