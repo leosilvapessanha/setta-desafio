@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Box } from './PaymentStyle';
 
-const TimeOut = () => {
-  const [timeAllowed, setTimeAllowed] = useState(true);
+interface TimeOutProps {
+  timeAllowed: boolean;
+}
 
-  useEffect(() => {
-    setTimeout(() => setTimeAllowed(false), 45000);
-  }, []);
-  return <>{timeAllowed ? null : null}</>;
+const TimeOut = (props: TimeOutProps): React.ReactElement => {
+  const { timeAllowed } = props;
+  return timeAllowed ? null : <Box>Test</Box>;
 };
 
 export { TimeOut };

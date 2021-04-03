@@ -13,14 +13,19 @@ import api from '../../services/api';
 import ListCharactersProps from '../../@types/interfaces/ListCharactersProps';
 import CharacterProps from '../../@types/interfaces/CharacterProps';
 import logo from '../../assets/logo.png';
-// import { TimeOut } from '../../hooks/PaymentReaquired';
+import { TimeOut } from '../../hooks/PaymentReaquired';
 
 const Characters = () => {
   const [nextPage, setNextPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [characters, setCharacters] = useState<CharacterProps[]>([]);
+  const [timeAllowed, setTimeAllowed] = useState<boolean>(true);
 
   const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => setTimeAllowed(false), 45000);
+  }, []);
 
   useEffect(() => {
     fechData();
@@ -58,7 +63,6 @@ const Characters = () => {
 
   return (
     <>
-      {/* <TimeOut /> */}
       <Image
         source={logo}
         resizeMode="cover"
@@ -78,6 +82,7 @@ const Characters = () => {
           keyExtractor={item => item.name}
         />
       </Container>
+      <TimeOut timeAllowed={timeAllowed} />
     </>
   );
 };
