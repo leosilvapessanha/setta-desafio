@@ -1,22 +1,12 @@
-import React, { createContext, ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-interface TimeOutProps {
-  timeAllowed: boolean;
-  setTimeallowed: boolean;
-}
-
-function TimeOut({ children }: TimeOutProps): any {
+const TimeOut = () => {
   const [timeAllowed, setTimeAllowed] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setTimeAllowed(false), 45000);
   }, []);
-
-  // eslint-disable-next-line no-lone-blocks
-  {
-    // eslint-disable-next-line no-unused-expressions
-    timeAllowed ? <div /> : <div />;
-  }
-}
+  return <>{timeAllowed ? <h1>teste</h1> : <h1>teste2</h1>}</>;
+};
 
 export { TimeOut };

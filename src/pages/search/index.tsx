@@ -14,6 +14,7 @@ import api from '../../services/api';
 import ListCharactersProps from '../../@types/interfaces/ListCharactersProps';
 import CharacterProps from '../../@types/interfaces/CharacterProps';
 import logo from '../../assets/logo.png';
+import { TimeOut } from '../../hooks/PaymentReaquired';
 
 const Characters = () => {
   const [nextPage, setNextPage] = useState<number>(1);
@@ -60,6 +61,7 @@ const Characters = () => {
 
   return (
     <>
+      <TimeOut />
       <Image
         source={logo}
         resizeMode="cover"
