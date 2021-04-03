@@ -63,12 +63,12 @@ const Characters = () => {
 
   return (
     <>
-      <Image
-        source={logo}
-        resizeMode="cover"
-        style={{ width: '100%', height: 200 }}
-      />
       <Container>
+        <Image
+          source={logo}
+          resizeMode="cover"
+          style={{ width: '100%', height: 200 }}
+        />
         <FlatList
           testID="characters"
           data={characters}
