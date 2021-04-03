@@ -6,7 +6,7 @@ const TimeOut = () => {
   useEffect(() => {
     setTimeout(() => setTimeAllowed(false), 45000);
   }, []);
-  return <>{timeAllowed ? <h1>teste</h1> : <h1>teste2</h1>}</>;
+  return <>{timeAllowed ? null : null}</>;
 };
 
 export { TimeOut };

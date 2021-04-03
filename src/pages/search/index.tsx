@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-/* eslint-disable global-require */
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image } from 'react-native';
@@ -14,7 +13,7 @@ import api from '../../services/api';
 import ListCharactersProps from '../../@types/interfaces/ListCharactersProps';
 import CharacterProps from '../../@types/interfaces/CharacterProps';
 import logo from '../../assets/logo.png';
-import { TimeOut } from '../../hooks/PaymentReaquired';
+// import { TimeOut } from '../../hooks/PaymentReaquired';
 
 const Characters = () => {
   const [nextPage, setNextPage] = useState<number>(1);
@@ -27,7 +26,6 @@ const Characters = () => {
     fechData();
   }, []);
 
-  // eslint-disable-next-line no-underscore-dangle
   const fechData = async () => {
     try {
       setLoading(true);
@@ -43,7 +41,6 @@ const Characters = () => {
     }
   };
 
-  // eslint-disable-next-line no-underscore-dangle
   const _handleDatail = (character: CharacterProps) => {
     navigation.navigate('Detail', { character });
   };
@@ -61,7 +58,7 @@ const Characters = () => {
 
   return (
     <>
-      <TimeOut />
+      {/* <TimeOut /> */}
       <Image
         source={logo}
         resizeMode="cover"
