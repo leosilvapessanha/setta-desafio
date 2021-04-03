@@ -24,7 +24,7 @@ const Characters = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
-    setTimeout(() => setTimeAllowed(false), 45000);
+    setTimeout(() => setTimeAllowed(false), 1000);
   }, []);
 
   useEffect(() => {
