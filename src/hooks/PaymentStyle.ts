@@ -11,33 +11,55 @@ export const Container = styled.View`
   height:100%;
   width:100%;
   background-color: #000;
-  /* opacity: 0.5; */
+`
+export const Content = styled.View`
+
+display:flex;
+height:35%;
+width: 75%;
+border: 2px #f9e916;
+margin-bottom: 36px;
+border-radius: 4px;
 `
 
+
 export const Title = styled.Text`
-  display:flex;
-  flex-direction: row;
-  /* height: 50%; */
+  color: #dedde5;
   width: 100%;
   text-align:center;
   align-items: center;
-  background-color: #fff;
+  background-color: #000;
   font-weight: bold;
-  border: 1px blue;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+
+
  `;
+export const Text = styled.Text`
+  display:flex;
+  flex-direction: column;
+  color: #dedde5;
+  width: 100%;
+  text-align:center;
+  align-items: center;
+  background-color: #000;
+  font-weight: bold;
+  padding: 0 16px;
+`;
 
 export const ButtonContainer = styled.TouchableOpacity`
   width: 180px;
   height: 48px;
   padding: 12px;
   border-radius: 24px;
-  background-color: #f4f4f4;
-  color:#000
-  `
+  background-color: #4074AD;
+  `;
+
 export const ButtonText = styled.Text`
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  color:#D6DFE8;
+
 `;
