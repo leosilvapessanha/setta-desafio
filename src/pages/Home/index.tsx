@@ -9,7 +9,6 @@ import api from '../../services/api';
 
 import ListCharactersProps from '../../@types/interfaces/ListCharactersProps';
 import CharacterProps from '../../@types/interfaces/CharacterProps';
-import logo from '../../assets/logo.png';
 import { TimeOut } from '../../hooks/PaymentReaquired';
 
 const Home = () => {
@@ -22,10 +21,6 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => setTimeAllowed(false), 45000);
-  }, []);
-
-  useEffect(() => {
-    fechData();
   }, []);
 
   const fechData = async () => {
@@ -42,6 +37,10 @@ const Home = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    fechData();
+  }, []);
 
   const CharactersDetails = (character: CharacterProps) => {
     navigation.navigate('Detail', { character });
@@ -61,7 +60,8 @@ const Home = () => {
     <>
       <Container testID="homePageReturn">
         <Image
-          source={logo}
+          // eslint-disable-next-line global-require
+          source={require('../../assets/logo.png')}
           resizeMode="cover"
           style={{ width: '100%', height: 200 }}
         />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 
-import logo from '../../assets/logo.png';
+// import logo from '../../assets/logo.png';
 import {
   ButtonText,
   Text,
@@ -16,7 +16,8 @@ const ModalResponse = () => {
     <>
       <Container>
         <Image
-          source={logo}
+          // eslint-disable-next-line global-require
+          source={require('../../assets/logo.png')}
           resizeMode="cover"
           style={{ width: '100%', height: 200 }}
         />

@@ -4,7 +4,7 @@ import Home from '../../../src/pages/Home';
 
 jest.mock('@react-navigation/native');
 
-describe('Testing pages/home', () => {
+describe('Test of pages/home', () => {
   it('should be able to render the home page', async () => {
     const { getByTestId } = await render(<Home />);
     const element = getByTestId('homePageReturn');
