@@ -46,18 +46,17 @@ const Characters = () => {
     }
   };
 
-  const _handleDatail = (character: CharacterProps) => {
+  const CharactersDetails = (character: CharacterProps) => {
     navigation.navigate('Detail', { character });
   };
 
   const renderItem = ({ item }: { item: CharacterProps }) => (
-    <ListItem onPress={() => _handleDatail(item)}>
+    <ListItem onPress={() => CharactersDetails(item)}>
       <Detail>
         <Item weight="bold">Name - {item.name}</Item>
         <Item>Height - {item.height} cm</Item>
         <Item>Weight - {item.mass} Kg</Item>
       </Detail>
-      <Icon name="arrow-forward-ios" size={24} color="ghostwhite" />
     </ListItem>
   );
 

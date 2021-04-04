@@ -9,7 +9,6 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <StatusBar animated backgroundColor="#000" />
-
       <Routes />
     </NavigationContainer>
   );

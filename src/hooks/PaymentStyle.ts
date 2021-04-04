@@ -29,7 +29,7 @@ export const Title = styled.Text`
   text-align:center;
   align-items: center;
   background-color: #000;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 36px;
   padding: 0 16px;
   margin-bottom: 24px;
@@ -44,7 +44,7 @@ export const Text = styled.Text`
   text-align:center;
   align-items: center;
   background-color: #000;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0 16px;
 `;
 

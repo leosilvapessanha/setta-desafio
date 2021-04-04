@@ -25,5 +25,5 @@ export const Detail = styled.View``;
 export const Item = styled.Text`
   color: #dedde5;
   font-size: 16px;
-  font-weight: ${props => props.weight || 'normal'};
+  font-weight: ${props => props.weight || '400'};
 `;
