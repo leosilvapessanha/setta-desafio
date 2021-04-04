@@ -22,7 +22,6 @@ margin-bottom: 36px;
 border-radius: 4px;
 `
 
-
 export const Title = styled.Text`
   color: #dedde5;
   width: 100%;
@@ -33,7 +32,6 @@ export const Title = styled.Text`
   font-size: 36px;
   padding: 0 16px;
   margin-bottom: 24px;
-
 
  `;
 export const Text = styled.Text`

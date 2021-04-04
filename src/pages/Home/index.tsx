@@ -2,11 +2,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image } from 'react-native';
-// import InfiniteScroll from 'react-infinite-scroll-component';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
-// import InfiniteScroll from 'react-infinite-scroller';
 import { Container, ListItem, Detail, Item } from './styles';
 import api from '../../services/api';
 
@@ -15,7 +12,7 @@ import CharacterProps from '../../@types/interfaces/CharacterProps';
 import logo from '../../assets/logo.png';
 import { TimeOut } from '../../hooks/PaymentReaquired';
 
-const Characters = () => {
+const Home = () => {
   const [nextPage, setNextPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [characters, setCharacters] = useState<CharacterProps[]>([]);
@@ -62,7 +59,7 @@ const Characters = () => {
 
   return (
     <>
-      <Container>
+      <Container testID="homePageReturn">
         <Image
           source={logo}
           resizeMode="cover"
@@ -86,4 +83,4 @@ const Characters = () => {
   );
 };
 
-export default Characters;
+export default Home;
