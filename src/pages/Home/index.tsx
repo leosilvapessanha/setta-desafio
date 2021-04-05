@@ -47,7 +47,7 @@ const Home = () => {
   };
 
   const renderItem = ({ item }: { item: CharacterProps }) => (
-    <ListItem onPress={() => CharactersDetails(item)}>
+    <ListItem>
       <Detail>
         <Item weight="bold">Nome - {item.name}</Item>
         <Item>Altura - {item.height} cm</Item>
