@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
 import { Container, ListItem, Detail, Item } from './styles';
 import api from '../../services/api';
 
@@ -16,8 +15,6 @@ const Home = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [characters, setCharacters] = useState<CharacterProps[]>([]);
   const [timeAllowed, setTimeAllowed] = useState<boolean>(true);
-
-  const navigation = useNavigation();
 
   useEffect(() => {
     setTimeout(() => setTimeAllowed(false), 45000);
@@ -41,10 +38,6 @@ const Home = () => {
   useEffect(() => {
     fechData();
   }, []);
-
-  const CharactersDetails = (character: CharacterProps) => {
-    navigation.navigate('Detail', { character });
-  };
 
   const renderItem = ({ item }: { item: CharacterProps }) => (
     <ListItem>
