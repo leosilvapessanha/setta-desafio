@@ -40,6 +40,3 @@ depois abra dois terminais. Em um deles rode:
 No outro terminal aberto rode:
 
 ```react-native run-android```
-
-
-made with :coffee:
