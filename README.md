@@ -5,7 +5,7 @@ O desafio consiste em desenvolver um aplicativo que vai listar os personagens de
 
 Após 45 segundos de uso do aplicativo, deve ser exibido um modal ou tela que bloqueie o uso do app e contenha uma mensagem pedindo que o usuário efetue um pagamento para continuar utilizando o mesmo. (a parte de receber pagamentos não precisa ser implementada).
 
-### Instruções
+## Instruções
 
 - Crie um aplicativo que liste os personagens de Star Wars;
 - Utilize React Native para desenvolver o aplicativo;
@@ -23,12 +23,12 @@ Se quiser dar um passo além, listamos aqui algumas funcionalidades que você po
 
 
 
-### Requerido
+## Requerido
 
 * React Native CLI
 * Emulador de android caso a máquina rode windows ou Linux (Android Studio)
 
-### instalação e Execução!
+## instalação e Execução!
 Primeiramente rode no terminal e na pasta que o projeto está:
 
 ```yarn```
@@ -42,22 +42,4 @@ No outro terminal aberto rode:
 ```react-native run-android```
 
 
-
-Get country of the visitor
-
-    GeoIP::getCountry();  // returns "United States"
-
-Get country code of the visitor
-
-    GeoIP::getCountryCode();  // returns "US"
-
-Get region of the visitor
-
-
-Credits
-=======
-
-
-
-
-made with :heart
+made with :coffee:
