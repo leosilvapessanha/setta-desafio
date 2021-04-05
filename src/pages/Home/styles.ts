@@ -6,7 +6,7 @@ export const Container = styled.View`
   padding: 10px;
 `;
 
-export const ListItem = styled.TouchableOpacity`
+export const ListItem = styled.View`
   display: flex;
   flex-direction: column;
   background-color: #000;
