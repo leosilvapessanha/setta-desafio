@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ModalResponse from '../components/modalResponse';
+import ModalResponse from '../utils/modalResponse';
 
 interface TimeOutProps {
   timeAllowed: boolean;
